@@ -17,6 +17,10 @@ protocol FirebaseAdapterDelegateProtocol {
     func configIsUpdated(cards: [CardItem])
 }
 
+private enum RemoteConfigKeys {
+    static let cardsKey = "cards"
+}
+
 final class FirebaseAdapter {
     static var shared = FirebaseAdapter()
     
@@ -44,7 +48,7 @@ final class FirebaseAdapter {
             return
         }
         
-        let data = remoteConfig.configValue(forKey: "cards").dataValue
+        let data = remoteConfig.configValue(forKey: RemoteConfigKeys.cardsKey).dataValue
         
         do {
             let cards = try JSONDecoder().decode([CardItem].self, from: data)
@@ -82,7 +86,7 @@ extension FirebaseAdapter: FirebaseAdapterProtocol {
                 return
             }
             
-            debugPrint("FirebaseAdapter: \(configUpdate.updatedKeys)")
+            debugPrint("FirebaseAdapter updatedKeys: \(configUpdate.updatedKeys)")
             
             self.remoteConfig.activate { changed, error in
                 guard error == nil else {

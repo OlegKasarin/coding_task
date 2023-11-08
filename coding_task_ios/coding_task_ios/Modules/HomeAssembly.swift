@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 final class HomeAssembly {
-    static func homeViewController() -> UIViewController {
+    static func homeViewController() -> HomeViewControllerProtocol {
         let controller = HomeViewController()
         
         let presenter = HomePresenter(controller: controller)

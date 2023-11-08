@@ -1,0 +1,20 @@
+//
+//  HomeAssembly.swift
+//  coding_task_ios
+//
+//  Created by Oleg Kasarin on 08/11/2023.
+//
+
+import Foundation
+import UIKit
+
+final class HomeAssembly {
+    static func homeViewController() -> UIViewController {
+        let controller = HomeViewController()
+        
+        let presenter = HomePresenter(controller: controller)
+        
+        controller.presenter = presenter
+        return controller
+    }
+}

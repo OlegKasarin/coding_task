@@ -45,10 +45,6 @@ final class FirebaseAdapter {
         }
         
         let data = remoteConfig.configValue(forKey: "cards").dataValue
-//        else {
-//            debugPrint("FirebaseAdapter: json value error")
-//            return
-//        }
         
         do {
             let cards = try JSONDecoder().decode([CardItem].self, from: data)
@@ -64,7 +60,7 @@ final class FirebaseAdapter {
 extension FirebaseAdapter: FirebaseAdapterProtocol {
     func configure() {
         let settings = RemoteConfigSettings()
-        settings.minimumFetchInterval = 0
+        settings.minimumFetchInterval = .zero
         remoteConfig.configSettings = settings
         
         // set defaults

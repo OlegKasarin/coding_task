@@ -44,6 +44,8 @@ private extension CardCollectionViewCell {
     func setup() {
         contentView.clipsToBounds = true
         contentView.layer.cornerRadius = 10
+        contentView.layer.borderWidth = 2
+        contentView.layer.borderColor = UIColor.black.cgColor
     }
     
     func prepare() {

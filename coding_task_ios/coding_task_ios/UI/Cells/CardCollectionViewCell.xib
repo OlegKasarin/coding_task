@@ -12,20 +12,20 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CardCollectionViewCell" customModule="coding_task_ios" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="408" height="140"/>
+            <rect key="frame" x="0.0" y="0.0" width="350" height="150"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="408" height="140"/>
+                <rect key="frame" x="0.0" y="0.0" width="350" height="150"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SIf-mb-vAa" customClass="BrandedImageView" customModule="coding_task_ios" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="408" height="140"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SIf-mb-vAa" customClass="BrandedImageView" customModule="coding_task_ios" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="350" height="150"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="67a-dZ-aOV">
-                        <rect key="frame" x="183" y="59.666666666666657" width="42" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <rect key="frame" x="153" y="64.666666666666671" width="44.333333333333343" height="21"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <color key="textColor" systemColor="systemOrangeColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
@@ -39,12 +39,12 @@
                 <constraint firstItem="67a-dZ-aOV" firstAttribute="centerX" secondItem="SIf-mb-vAa" secondAttribute="centerX" id="eq7-Lh-NF7"/>
                 <constraint firstItem="67a-dZ-aOV" firstAttribute="centerY" secondItem="SIf-mb-vAa" secondAttribute="centerY" id="otT-te-cfB"/>
             </constraints>
-            <size key="customSize" width="408" height="140"/>
+            <size key="customSize" width="337" height="151"/>
             <connections>
                 <outlet property="imageView" destination="SIf-mb-vAa" id="0rt-Eu-Dr9"/>
                 <outlet property="titleLabel" destination="67a-dZ-aOV" id="ptV-lZ-MDe"/>
             </connections>
-            <point key="canvasLocation" x="258.01526717557249" y="30.281690140845072"/>
+            <point key="canvasLocation" x="203.81679389312976" y="33.802816901408455"/>
         </collectionViewCell>
     </objects>
     <resources>

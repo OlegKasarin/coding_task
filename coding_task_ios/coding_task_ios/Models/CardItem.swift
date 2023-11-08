@@ -17,7 +17,11 @@ struct CardItem: Decodable {
 
 extension CardItem: CardDisplayItem {
     var title: String {
-        String(id)
+        #if DEBUG
+            "id:\(id) | order:\(order)"
+        #else
+            ""
+        #endif
     }
     
     var imageURL: String {

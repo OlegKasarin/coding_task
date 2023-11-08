@@ -1,0 +1,7 @@
+## Build generated
+DerivedData
+
+## Various settings
+xcuserdata
+.env*
+.bundle

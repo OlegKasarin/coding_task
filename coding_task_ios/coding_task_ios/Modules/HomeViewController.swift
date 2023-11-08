@@ -92,12 +92,14 @@ private extension HomeViewController {
     
     // MARK: - Layout
     
-    var collectionLayout: CollectionLayout {
+    var isLandscape: Bool {
         let isLandscape = traitCollection.verticalSizeClass == .compact
-        print("=== isLandscape:", isLandscape)
-        
-//        return UIDevice.current.userInterfaceIdiom == .pad
+        debugPrint("isLandscape:", isLandscape)
         return isLandscape
+    }
+    
+    var collectionLayout: CollectionLayout {
+        isLandscape
             ? padCollectionLayout
             : phoneCollectionLayout
     }

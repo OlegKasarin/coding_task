@@ -26,7 +26,20 @@ final class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupCollectionLayout()
         presenter?.didTriggerViewLoad()
+    }
+    
+    override func viewWillTransition(
+        to size: CGSize,
+        with coordinator: UIViewControllerTransitionCoordinator
+    ) {
+        super.viewWillTransition(to: size, with: coordinator)
+
+        coordinator.animate(alongsideTransition: { [unowned self] _ in
+            setupCollectionLayout()
+            collectionView.collectionViewLayout.invalidateLayout()
+        })
     }
 }
 
@@ -73,5 +86,49 @@ extension HomeViewController: HomeViewControllerProtocol {
 // MARK: - Private
 
 private extension HomeViewController {
+    func setupCollectionLayout() {
+        collectionView.collectionViewLayout = CollectionViewLayoutBuilder.build(collectionLayout)
+    }
     
+    // MARK: - Layout
+    
+    var collectionLayout: CollectionLayout {
+        let isLandscape = traitCollection.verticalSizeClass == .compact
+        print("=== isLandscape:", isLandscape)
+        
+//        return UIDevice.current.userInterfaceIdiom == .pad
+        return isLandscape
+            ? padCollectionLayout
+            : phoneCollectionLayout
+    }
+    
+    var padCollectionLayout: CollectionLayout {
+        let countVisibleCells: CGFloat = 2.35
+        let minimumLineSpacing: CGFloat = 50
+        let padCellRatio: CGFloat = 350/150
+        let sectionInsets = UIEdgeInsets(top: 60, left: 40, bottom: 60, right: 40)
+        
+        return CollectionLayout(
+            cellRatio: padCellRatio,
+            visibleCountInRow: countVisibleCells,
+            minimumLineSpacing: minimumLineSpacing,
+            sectionInset: sectionInsets,
+            scrollDirection: .vertical
+        )
+    }
+    
+    var phoneCollectionLayout: CollectionLayout {
+        let countVisibleCells: CGFloat = 1
+        let minimumLineSpacing: CGFloat = 60
+        let phoneCellRation: CGFloat = 7/4
+        let sectionInsets = UIEdgeInsets(top: 20, left: 60, bottom: 40, right: 60)
+        
+        return CollectionLayout(
+            cellRatio: phoneCellRation,
+            visibleCountInRow: countVisibleCells,
+            minimumLineSpacing: minimumLineSpacing,
+            sectionInset: sectionInsets,
+            scrollDirection: .vertical
+        )
+    }
 }

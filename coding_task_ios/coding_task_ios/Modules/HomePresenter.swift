@@ -57,6 +57,9 @@ extension HomePresenter: FirebaseAdapterDelegateProtocol {
     func configIsUpdated(cards: [CardItem]) {
         // sort by order
         self.cards = cards.sorted(by: { $0.order < $1.order })
-        controller?.refresh()
+        
+        DispatchQueue.main.async {
+            self.controller?.refresh()
+        }
     }
 }

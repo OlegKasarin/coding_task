@@ -65,13 +65,37 @@
 			children = (
 				0015D0402AFB877400E66B2D /* AppDelegate.swift */,
 				0015D0422AFB877400E66B2D /* SceneDelegate.swift */,
-				0015D0442AFB877400E66B2D /* ViewController.swift */,
-				0015D0462AFB877400E66B2D /* Main.storyboard */,
+				006368362AFB886D0029F55B /* Models */,
+				006368372AFB88750029F55B /* Modules */,
+				006368382AFB887D0029F55B /* UI */,
 				0015D0492AFB877500E66B2D /* Assets.xcassets */,
-				0015D04B2AFB877500E66B2D /* LaunchScreen.storyboard */,
 				0015D04E2AFB877500E66B2D /* Info.plist */,
+				0015D04B2AFB877500E66B2D /* LaunchScreen.storyboard */,
+				0015D0462AFB877400E66B2D /* Main.storyboard */,
+				0015D0442AFB877400E66B2D /* ViewController.swift */,
 			);
 			path = coding_task_ios;
+			sourceTree = "<group>";
+		};
+		006368362AFB886D0029F55B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		006368372AFB88750029F55B /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		006368382AFB887D0029F55B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		9D13BBE00415A9D2F131B523 /* Frameworks */ = {
@@ -88,7 +112,6 @@
 				97532FBEAC0BF6125C262067 /* Pods-coding_task_ios.debug.xcconfig */,
 				5DFEC7AAC0B4DC2F9E9741A1 /* Pods-coding_task_ios.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};

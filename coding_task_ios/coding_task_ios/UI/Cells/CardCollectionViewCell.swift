@@ -15,14 +15,35 @@ final class CardCollectionViewCell: UICollectionViewCell {
     static let cellID = "CardCollectionViewCell"
     static let nibName = "CardCollectionViewCell"
     
-    @IBOutlet private weak var imageView: UIImageView!
+    @IBOutlet private weak var imageView: BrandedImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        setup()
+        prepare()
     }
-
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        prepare()
+    }
+    
+    // MARK: - Public
+    
     func setup(displayItem: CardDisplayItem) {
-        displayItem.imageURL
+        imageView.load(imageURL: displayItem.imageURL, placeholder: nil)
+    }
+}
+
+// MARK: - Private
+
+private extension CardCollectionViewCell {
+    func setup() {
+        contentView.clipsToBounds = true
+        contentView.layer.cornerRadius = 10
+    }
+    
+    func prepare() {
+        imageView.image = nil
     }
 }

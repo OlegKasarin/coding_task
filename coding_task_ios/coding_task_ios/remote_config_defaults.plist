@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>cards</key>
+  <string>[{"id":1,"url":"image_url_1","order":1},{"id":2,"url":"image_url_2","order":2},{"id":33,"url":"image_url_33","order":333},{"id":42,"url":"image_url_42","order":44}]</string>
+</dict>
+</plist>

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0015D0412AFB877400E66B2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0015D0402AFB877400E66B2D /* AppDelegate.swift */; };
 		0015D0432AFB877400E66B2D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0015D0422AFB877400E66B2D /* SceneDelegate.swift */; };
-		0015D0452AFB877400E66B2D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0015D0442AFB877400E66B2D /* ViewController.swift */; };
 		0015D0482AFB877400E66B2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0015D0462AFB877400E66B2D /* Main.storyboard */; };
 		0015D04A2AFB877500E66B2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0015D0492AFB877500E66B2D /* Assets.xcassets */; };
 		0015D04D2AFB877500E66B2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0015D04B2AFB877500E66B2D /* LaunchScreen.storyboard */; };
@@ -20,6 +19,10 @@
 		006368442AFB8B1E0029F55B /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006368422AFB8B1E0029F55B /* CardCollectionViewCell.swift */; };
 		006368452AFB8B1E0029F55B /* CardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 006368432AFB8B1E0029F55B /* CardCollectionViewCell.xib */; };
 		006368472AFB8D170029F55B /* BrandedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006368462AFB8D170029F55B /* BrandedImageView.swift */; };
+		0063684A2AFB8EF30029F55B /* FirebaseAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006368492AFB8EF30029F55B /* FirebaseAdapter.swift */; };
+		0063684C2AFB8FE60029F55B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0063684B2AFB8FE60029F55B /* GoogleService-Info.plist */; };
+		0063684E2AFB90870029F55B /* CardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0063684D2AFB90870029F55B /* CardItem.swift */; };
+		006368542AFB97980029F55B /* remote_config_defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 006368532AFB97980029F55B /* remote_config_defaults.plist */; };
 		034A4660C0B1857EB93A4287 /* Pods_coding_task_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B698581E5FDBA4351CC115F /* Pods_coding_task_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,7 +30,6 @@
 		0015D03D2AFB877400E66B2D /* coding_task_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = coding_task_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0015D0402AFB877400E66B2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0015D0422AFB877400E66B2D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0015D0442AFB877400E66B2D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0015D0472AFB877400E66B2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0015D0492AFB877500E66B2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0015D04C2AFB877500E66B2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -39,6 +41,10 @@
 		006368422AFB8B1E0029F55B /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		006368432AFB8B1E0029F55B /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCollectionViewCell.xib; sourceTree = "<group>"; };
 		006368462AFB8D170029F55B /* BrandedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandedImageView.swift; sourceTree = "<group>"; };
+		006368492AFB8EF30029F55B /* FirebaseAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAdapter.swift; sourceTree = "<group>"; };
+		0063684B2AFB8FE60029F55B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0063684D2AFB90870029F55B /* CardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardItem.swift; sourceTree = "<group>"; };
+		006368532AFB97980029F55B /* remote_config_defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = remote_config_defaults.plist; sourceTree = "<group>"; };
 		3B698581E5FDBA4351CC115F /* Pods_coding_task_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_coding_task_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DFEC7AAC0B4DC2F9E9741A1 /* Pods-coding_task_ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-coding_task_ios.release.xcconfig"; path = "Target Support Files/Pods-coding_task_ios/Pods-coding_task_ios.release.xcconfig"; sourceTree = "<group>"; };
 		97532FBEAC0BF6125C262067 /* Pods-coding_task_ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-coding_task_ios.debug.xcconfig"; path = "Target Support Files/Pods-coding_task_ios/Pods-coding_task_ios.debug.xcconfig"; sourceTree = "<group>"; };
@@ -81,12 +87,14 @@
 				0015D0422AFB877400E66B2D /* SceneDelegate.swift */,
 				006368362AFB886D0029F55B /* Models */,
 				006368372AFB88750029F55B /* Modules */,
+				006368482AFB8EE30029F55B /* Services */,
 				006368382AFB887D0029F55B /* UI */,
 				0015D0492AFB877500E66B2D /* Assets.xcassets */,
 				0015D04E2AFB877500E66B2D /* Info.plist */,
 				0015D04B2AFB877500E66B2D /* LaunchScreen.storyboard */,
 				0015D0462AFB877400E66B2D /* Main.storyboard */,
-				0015D0442AFB877400E66B2D /* ViewController.swift */,
+				0063684B2AFB8FE60029F55B /* GoogleService-Info.plist */,
+				006368532AFB97980029F55B /* remote_config_defaults.plist */,
 			);
 			path = coding_task_ios;
 			sourceTree = "<group>";
@@ -94,6 +102,7 @@
 		006368362AFB886D0029F55B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0063684D2AFB90870029F55B /* CardItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -125,6 +134,14 @@
 				006368432AFB8B1E0029F55B /* CardCollectionViewCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		006368482AFB8EE30029F55B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				006368492AFB8EF30029F55B /* FirebaseAdapter.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		9D13BBE00415A9D2F131B523 /* Frameworks */ = {
@@ -204,11 +221,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				006368542AFB97980029F55B /* remote_config_defaults.plist in Resources */,
 				0015D04D2AFB877500E66B2D /* LaunchScreen.storyboard in Resources */,
 				006368452AFB8B1E0029F55B /* CardCollectionViewCell.xib in Resources */,
 				0015D04A2AFB877500E66B2D /* Assets.xcassets in Resources */,
 				0015D0482AFB877400E66B2D /* Main.storyboard in Resources */,
 				0063683E2AFB892B0029F55B /* HomeViewController.xib in Resources */,
+				0063684C2AFB8FE60029F55B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,10 +281,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0063683D2AFB892B0029F55B /* HomeViewController.swift in Sources */,
-				0015D0452AFB877400E66B2D /* ViewController.swift in Sources */,
 				0015D0412AFB877400E66B2D /* AppDelegate.swift in Sources */,
 				006368402AFB89380029F55B /* HomePresenter.swift in Sources */,
 				006368442AFB8B1E0029F55B /* CardCollectionViewCell.swift in Sources */,
+				0063684A2AFB8EF30029F55B /* FirebaseAdapter.swift in Sources */,
+				0063684E2AFB90870029F55B /* CardItem.swift in Sources */,
 				0063683A2AFB89170029F55B /* HomeAssembly.swift in Sources */,
 				0015D0432AFB877400E66B2D /* SceneDelegate.swift in Sources */,
 				006368472AFB8D170029F55B /* BrandedImageView.swift in Sources */,

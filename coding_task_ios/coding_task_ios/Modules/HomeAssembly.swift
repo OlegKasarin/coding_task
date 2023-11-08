@@ -12,7 +12,10 @@ final class HomeAssembly {
     static func homeViewController() -> HomeViewControllerProtocol {
         let controller = HomeViewController()
         
-        let presenter = HomePresenter(controller: controller)
+        let presenter = HomePresenter(
+            controller: controller,
+            firebaseAdapter: FirebaseAdapter.shared
+        )
         
         controller.presenter = presenter
         return controller

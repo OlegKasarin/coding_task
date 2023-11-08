@@ -22,6 +22,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="408" height="140"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="67a-dZ-aOV">
+                        <rect key="frame" x="183" y="59.666666666666657" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
@@ -30,10 +36,13 @@
                 <constraint firstItem="SIf-mb-vAa" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Ifn-hs-czH"/>
                 <constraint firstItem="SIf-mb-vAa" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="TYK-C9-SqA"/>
                 <constraint firstAttribute="bottom" secondItem="SIf-mb-vAa" secondAttribute="bottom" id="elc-u3-VLX"/>
+                <constraint firstItem="67a-dZ-aOV" firstAttribute="centerX" secondItem="SIf-mb-vAa" secondAttribute="centerX" id="eq7-Lh-NF7"/>
+                <constraint firstItem="67a-dZ-aOV" firstAttribute="centerY" secondItem="SIf-mb-vAa" secondAttribute="centerY" id="otT-te-cfB"/>
             </constraints>
             <size key="customSize" width="408" height="140"/>
             <connections>
                 <outlet property="imageView" destination="SIf-mb-vAa" id="0rt-Eu-Dr9"/>
+                <outlet property="titleLabel" destination="67a-dZ-aOV" id="ptV-lZ-MDe"/>
             </connections>
             <point key="canvasLocation" x="258.01526717557249" y="30.281690140845072"/>
         </collectionViewCell>

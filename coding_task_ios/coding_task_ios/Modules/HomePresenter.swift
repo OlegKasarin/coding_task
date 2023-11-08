@@ -17,10 +17,21 @@ protocol HomePresenterProtocol {
 final class HomePresenter {
     weak var controller: HomeViewControllerProtocol?
     
-    private var cards: [CardDisplayItem] = []
+    private let maxCardsCount = 6
     
-    init(controller: HomeViewControllerProtocol) {
+    private let firebaseAdapter: FirebaseAdapterProtocol
+    
+    private var cards: [CardItem] = []
+    private var displayItems: [CardDisplayItem] {
+        Array(cards.prefix(maxCardsCount))
+    }
+    
+    init(
+        controller: HomeViewControllerProtocol,
+        firebaseAdapter: FirebaseAdapterProtocol
+    ) {
         self.controller = controller
+        self.firebaseAdapter = firebaseAdapter
     }
 }
 
@@ -28,14 +39,24 @@ final class HomePresenter {
 
 extension HomePresenter: HomePresenterProtocol {
     func didTriggerViewLoad() {
-        // fetch
+        firebaseAdapter.startListenChanges(self)
     }
     
     func didTriggerAskItemsCount() -> Int {
-        cards.count
+        displayItems.count
     }
     
     func didTriggerAskItem(at indexPath: IndexPath) -> CardDisplayItem {
-        cards[indexPath.row]
+        displayItems[indexPath.row]
+    }
+}
+
+// MARK: - FirebaseAdapterDelegateProtocol
+
+extension HomePresenter: FirebaseAdapterDelegateProtocol {
+    func configIsUpdated(cards: [CardItem]) {
+        // sort by order
+        self.cards = cards.sorted(by: { $0.order < $1.order })
+        controller?.refresh()
     }
 }

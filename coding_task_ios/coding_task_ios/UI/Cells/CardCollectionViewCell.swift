@@ -8,6 +8,7 @@
 import UIKit
 
 protocol CardDisplayItem {
+    var title: String { get }
     var imageURL: String { get }
 }
 
@@ -15,6 +16,7 @@ final class CardCollectionViewCell: UICollectionViewCell {
     static let cellID = "CardCollectionViewCell"
     static let nibName = "CardCollectionViewCell"
     
+    @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var imageView: BrandedImageView!
     
     override func awakeFromNib() {
@@ -31,6 +33,7 @@ final class CardCollectionViewCell: UICollectionViewCell {
     // MARK: - Public
     
     func setup(displayItem: CardDisplayItem) {
+        titleLabel.text = displayItem.title
         imageView.load(imageURL: displayItem.imageURL, placeholder: nil)
     }
 }

@@ -13,7 +13,7 @@ protocol FirebaseAdapterProtocol {
     func startListenChanges(_ listener: FirebaseAdapterDelegateProtocol)
 }
 
-protocol FirebaseAdapterDelegateProtocol {
+protocol FirebaseAdapterDelegateProtocol: AnyObject {
     func configIsUpdated(cards: [CardItem])
 }
 
@@ -26,7 +26,7 @@ final class FirebaseAdapter {
     
     private let remoteConfig: RemoteConfig = RemoteConfig.remoteConfig()
     
-    var delegate: FirebaseAdapterDelegateProtocol?
+    weak var delegate: FirebaseAdapterDelegateProtocol?
     
     private init() {}
     
@@ -51,7 +51,8 @@ final class FirebaseAdapter {
         let data = remoteConfig.configValue(forKey: RemoteConfigKeys.cardsKey).dataValue
         
         do {
-            let cards = try JSONDecoder().decode([CardItem].self, from: data)
+            let items = try JSONDecoder().decode([CardItemResponse].self, from: data)
+            let cards = items.compactMap { CardItem(response: $0) }
             delegate.configIsUpdated(cards: cards)
         } catch let error {
             debugPrint("FirebaseAdapter: JSONDecoder fail: \(error)")

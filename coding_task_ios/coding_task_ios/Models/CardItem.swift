@@ -7,10 +7,30 @@
 
 import Foundation
 
-struct CardItem: Decodable {
+// MARK: - Response model
+
+struct CardItemResponse: Decodable {
+    let id: Int?
+    let url: String?
+    let order: Int?
+}
+
+// MARK: - Business model
+
+struct CardItem {
     let id: Int
     let url: String
     let order: Int
+    
+    init?(response: CardItemResponse) {
+        guard let id = response.id else {
+            return nil
+        }
+        
+        self.id = id
+        self.url = response.url ?? ""
+        self.order = response.order ?? Int.max
+    }
 }
 
 // MARK: - CardDisplayItem
